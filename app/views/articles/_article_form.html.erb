@@ -1,0 +1,27 @@
+<%= form_for @article do |f| %>
+
+
+  <%=	 render "layouts/error_messages", :target => @article %>
+
+    <div id="article_form">
+    <p>
+    <%=	 f.label :title, "Article Title" %><br />
+    <%=	 f.text_field :title %>
+    </p>
+    
+    <p>
+    <%=	 f.label :body, "Article Body" %><br />
+    <%= f.text_area :body %>
+    </p>
+    
+    <p>
+      <%=	 f.label :author, "Resource Box" %><br />
+      <%=	 f.text_area :author, :rows => 5  %>
+    </p>
+    </div>
+
+    
+    <p>
+      <%=	 f.submit "Submit Article" %>
+    </p>
+<% end %>

@@ -1,0 +1,9 @@
+<h1><%=	 @user.name %>'s Articles</h1>
+
+<%	 @articles.each do |article| %>
+    <p>
+    <%=	 link_to article.title, article_path(article) %>
+    </p>
+<%	 end %>
+
+Number of articles: <%=	 @articles.count %>

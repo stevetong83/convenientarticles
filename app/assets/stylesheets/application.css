@@ -1,0 +1,162 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+*/
+
+body {
+    background-color: #ccc;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1, h2 {
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.title {
+    font-weight: bold;
+}
+
+.body {
+    font-size: 80%;
+    color: #787878;
+}
+
+#devise input, textarea {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #bbb;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    padding: 10px;
+    margin-top: 5px;
+    width: 40%;
+}
+
+#navigation {
+    height: 50px;
+    background-color: #0f4e8a;
+}
+
+#navigation a:link {
+    text-decoration: none;
+    color: #ccc;
+}
+
+#navigation a:visited {
+    text-decoration: none;
+    color: #ccc;
+}
+
+#navigation a:hover {
+    text-decoration: none;
+    color: #ccc;
+}
+
+#nav_wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1000px;
+}
+
+#logo {
+    padding-top: 13px;
+    color: #ccc;
+    font-size: 150%;
+    float: left;
+
+}
+
+#navbar {
+    float: right;
+    color: #ccc;
+}
+
+#navbar ul li {
+    display: inline;
+    list-style-type: none;
+    padding-left: 10px;
+}
+
+#wrapper {
+    background: url(notebook.gif) repeat-y;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1000px;
+    background-color: #fff;
+    min-height: 900px;
+    height: auto;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+}
+
+#content {
+    width: 650px;
+    padding: 20px 20px 20px 70px;
+    margin-bottom: 25px;
+}
+
+#footer {
+    margin-top: 10px;
+    background-color: #0f4e8a;
+    color: #ccc;
+}
+
+#footer ul li {
+    list-style-type: none;
+}
+
+#footer_content {
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1000px;
+}
+
+.error {
+     color: #D63301;
+     background-color: #FFCCBA;
+     border: 1px solid #D63301;
+     padding-left: 10px;
+     margin-bottom: 10px;
+     border-radius: 5px;
+ }
+
+#error_message {
+    color: #D63301;
+    background-color: #FFCCBA;
+    border: 1px solid #D63301;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+#success_message {
+    color: #4F8A10;
+    background-color: #DFF2BF;
+    border: 1px solid #4F8A10;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+#error_message ul li {
+    list-style-type: none;
+}
+
+#footer a:link, a:hover, a:visited {
+    text-decoration: none;
+    color: #ccc;
+}

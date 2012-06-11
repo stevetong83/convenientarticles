@@ -1,0 +1,13 @@
+<h1>User's</h1>
+<%	 @users.each do |user| %>
+      <%=	 link_to user.name, user %> signed up <%=	 user.created_at %>
+
+
+    <p>
+      <%=	 will_paginate @users %>
+    </p>
+
+
+<%	 end %>
+
+Number of users: <%=	 @users.count %>

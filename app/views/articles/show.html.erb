@@ -1,0 +1,7 @@
+<h1><%= @article.title %></h1>
+Written by: <%=	 link_to @article.user.name, @article.user %>
+
+<p><%=	 simple_format(@article.body) %></p>
+
+<%=	 link_to "Edit", "#" %>
+<%=	 link_to "Delete", "#" %>

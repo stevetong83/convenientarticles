@@ -1,0 +1,12 @@
+<h1>Welcome to Convenient Articles</h1>
+<br />
+
+
+<h2>Recent Articles</h2>
+<%	 @articles.each do |article| %>
+    <p>
+<span class="title"><%=	 link_to article.title, article_path(article) %></span><br />
+      <span class="body"><%=	 article.body.slice(0,300) %></span>
+    </p>
+
+<%	 end %>

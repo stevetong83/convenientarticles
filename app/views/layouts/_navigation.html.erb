@@ -1,0 +1,27 @@
+<div id="navigation">
+    <div id="nav_wrapper">
+    <div id="logo">
+<%=	   link_to "Convenient Articles", root_path  %>
+     </div>
+    <div id="navbar">
+      <ul>
+        <li><%= link_to "New Article", new_path %></li>
+        <%	 if user_signed_in? %>
+        <li><%= link_to "Articles", current_user %></li>
+        <li><%= link_to "Edit Profile", edit_user_registration_path %></li>
+            <%	 if current_user.has_role? :admin %>
+                <li><%=	 link_to "Admin", users_path %></li>
+            <%	 end %>
+            <li><%= link_to "Sign out", destroy_user_session_path, :method => "delete" %></li>
+        <%	 else %>
+            <li><%= link_to "Sign in", new_user_session_path %></li>
+        <%	 end %>
+        <%	 if user_signed_in? %>
+        <%	 else %>
+        <li><%=	 link_to "Sign up", new_user_registration_path %></li>
+            <%	 end %>
+      </ul>
+
+    </div>
+    </div>
+</div>
