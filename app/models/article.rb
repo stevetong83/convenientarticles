@@ -8,7 +8,7 @@ class Article < ActiveRecord::Base
                     :length => {:minimum => 3}
 
   validates :body, :presence => true,
-                    :length => {:minimum   => 5,
+                    :length => {:minimum   => 300,
                     :tokenizer => lambda { |str| str.scan(/\w+/) },
                     :too_short => "must have at least %{count} words"}
   validates :user_id, :presence => true
