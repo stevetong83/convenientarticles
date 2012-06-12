@@ -1,7 +1,22 @@
 <h1><%= @article.title %></h1>
-Written by: <%=	 link_to @article.user.name, @article.user %>
 
-<p><%=	 simple_format(@article.body) %></p>
+<span class="body">
+Written by: <%=	 link_to @article.user.name, @article.user %><br />
+<%=	 @article.created_at.strftime("Published: %B %e, %Y") %> <br />
+  </span>
 
-<%=	 link_to "Edit", "#" %>
-<%=	 link_to "Delete", "#" %>
+<%	 if can? :update, @article %>
+<%=	 link_to "Edit", edit_article_path(@article) %> |
+    <%	 end %>
+<%	 if can? :delete, @article %>
+<%=	 link_to "Delete", @article, confirm: "Are you sure?", method: :delete %>
+    <%	 end %>
+
+<div id="article_content">
+  <span class="article_body"><p><%=	 simple_format(@article.body) %></p></span>
+<b>Author's Resource Box</b>
+<span class="article_body"><p><%=	 @article.author %></p></span>
+</div>
+
+
+

@@ -3,16 +3,15 @@ class UsersController < ApplicationController
   load_and_authorize_resource :except => :show
 
   def index
-
     @users = User.paginate :page => params[:page],
-                            :per_page => 20,
+                            :per_page => 30,
                             :order => "name"
   end
 
   def show
     @user = User.find params[:id]
     @articles = @user.articles.paginate :page => params[:page],
-                                       :per_page => 10,
+                                       :per_page => 20,
                                        :order => "created_at DESC"
   end
 

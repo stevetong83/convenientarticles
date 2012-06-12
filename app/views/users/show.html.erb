@@ -1,9 +1,13 @@
 <h1><%=	 @user.name %>'s Articles</h1>
 
 <%	 @articles.each do |article| %>
-    <p>
-    <%=	 link_to article.title, article_path(article) %>
-    </p>
+    <ul>
+    <li><span class="title"><%=	 link_to article.title, article_path(article) %></span></li>
+    </ul>
 <%	 end %>
 
-Number of articles: <%=	 @articles.count %>
+  <%=	 will_paginate @articles %>
+  <br />
+
+<span class="count">Total number of articles: <%=	 @articles.count %></span>
+

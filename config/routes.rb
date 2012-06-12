@@ -12,6 +12,7 @@ Convenientarticles::Application.routes.draw do
   match "/contact", to: "pages#contact"
   match "/admin", to: "users#index"
   match "/new", to: "articles#new"
+  match "/guidelines", to: "pages#submission_guidelines"
 
 
 

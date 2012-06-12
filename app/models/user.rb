@@ -15,4 +15,8 @@ class User < ActiveRecord::Base
   has_many :articles
 
 
+  def role?(role)
+    roles.include? role.to_s
+  end
+
 end

@@ -48,12 +48,7 @@ h1, h2 {
     background-color: #0f4e8a;
 }
 
-#navigation a:link {
-    text-decoration: none;
-    color: #ccc;
-}
-
-#navigation a:visited {
+#navigation a:link, a:visited {
     text-decoration: none;
     color: #ccc;
 }
@@ -62,6 +57,33 @@ h1, h2 {
     text-decoration: none;
     color: #ccc;
 }
+
+#content a:link {
+    color: #0f4e8a;
+    text-decoration: none;
+}
+
+#content a:visited {
+    color: #0f4e8a;
+    text-decoration: none;
+}
+
+#content a:hover {
+    color: #0f4e8a;
+    text-decoration: underline;
+}
+
+#footer a:link, a:visited {
+    text-decoration: none;
+    color: #ccc;
+}
+
+#footer a:hover {
+    text-decoration: none;
+    color: #ccc;
+}
+
+
 
 #nav_wrapper {
     margin-left: auto;
@@ -102,10 +124,20 @@ h1, h2 {
     -moz-border-radius: 10px;
 }
 
+#adsense {
+    width: 930px;
+    height: 110px;
+    text-align: center;
+}
+
 #content {
-    width: 650px;
+    width: 930px;
     padding: 20px 20px 20px 70px;
     margin-bottom: 25px;
+}
+
+#article_content {
+    padding-right: 30px;
 }
 
 #footer {
@@ -156,7 +188,66 @@ h1, h2 {
     list-style-type: none;
 }
 
-#footer a:link, a:hover, a:visited {
-    text-decoration: none;
+.time_published {
+    font-style: italic;
+    font-size: 75%;
     color: #ccc;
 }
+
+#footer_left {
+    float: left;
+    padding-left: 50px;
+}
+
+#footer_right {
+    float: right;
+    padding-right: 50px;
+}
+
+#bottom {
+    height: 1px;
+    clear: both;
+}
+
+.count {
+    font-weight: bold;
+    font-size: 75%;
+    letter-spacing: -1px;
+}
+
+
+
+#article {
+    width: 600px;
+    float: left;
+}
+
+#search {
+    width: 300px;
+    float: left;
+}
+
+#search_text {
+    float: left;
+    width: 175px;
+    padding-left: 50px;
+}
+
+
+#search_text input, textarea {
+    width: 175px;
+    padding: 10px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #bbb;
+    border-radius: 5px;
+}
+
+#search_button {
+    width: 40px;
+    height: 40px;
+    border: 0;
+    float: right;
+}
+
+

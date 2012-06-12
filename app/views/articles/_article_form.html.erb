@@ -1,9 +1,9 @@
 <%= form_for @article do |f| %>
 
-
   <%=	 render "layouts/error_messages", :target => @article %>
 
     <div id="article_form">
+
     <p>
     <%=	 f.label :title, "Article Title" %><br />
     <%=	 f.text_field :title %>
@@ -20,8 +20,8 @@
     </p>
     </div>
 
-    
     <p>
       <%=	 f.submit "Submit Article" %>
     </p>
 <% end %>
+

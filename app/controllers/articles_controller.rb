@@ -28,12 +28,24 @@ class ArticlesController < ApplicationController
 
   def edit
     @page_title = "Edit your article"
+
+
   end
 
   def update
+    @article = Article.find params[:id]
+    @article.update_attributes params[:article]
+    if @article.save
+      redirect_to @article
+    else
+      render "edit"
+    end
   end
 
   def destroy
+    @article.destroy
+    flash[:notice] = "Article has been successfully deleted"
+    redirect_to current_user
 
   end
 end

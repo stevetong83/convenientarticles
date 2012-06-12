@@ -8,7 +8,7 @@ class Ability
       can :manage, :all
     else
       can :manage, Article do |article|
-        article.try(:owner) == user
+        article.try(:user) == user
       end
     end
   end
