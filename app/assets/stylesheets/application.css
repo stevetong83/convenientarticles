@@ -131,6 +131,7 @@ h1, h2 {
 }
 
 #content {
+    background: url(notebook.gif) repeat-y;
     width: 930px;
     padding: 20px 20px 20px 70px;
     margin-bottom: 25px;
