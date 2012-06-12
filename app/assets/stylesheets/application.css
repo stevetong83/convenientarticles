@@ -111,7 +111,7 @@ h1, h2 {
 }
 
 #wrapper {
-    background: url(notebook.gif) repeat-y;
+
     margin-top: 10px;
     margin-left: auto;
     margin-right: auto;
@@ -170,9 +170,9 @@ h1, h2 {
     color: #D63301;
     background-color: #FFCCBA;
     border: 1px solid #D63301;
-    padding: 10px;
-    margin: 10px 0;
+    margin: 10px 20px;
     border-radius: 5px;
+
 }
 
 #success_message {
