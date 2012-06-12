@@ -69,13 +69,6 @@ Convenientarticles::Application.configure do
   # ActionMailer Config
   # Setup for production - deliveries, no errors raised
   config.action_mailer.delivery_method = :smtp
-  ActionMailer::Base.smtp_settings = {
-      :address  => "smtp.west.cox.net",
-      :port  => 25,
-      :user_name  => "support@convenientcalendar.com",
-      :password  => "C@l3nd@r",
-      :authentication  => :login
-  }
   config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.default :charset => "utf-8"
