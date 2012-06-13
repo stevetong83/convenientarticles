@@ -19,4 +19,8 @@ class User < ActiveRecord::Base
     roles.include? role.to_s
   end
 
+  def to_param
+    "#{id}-#{name.gsub(/\W/, '-').downcase}s-articles"
+  end
+
 end

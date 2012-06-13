@@ -3,6 +3,7 @@ class UsersController < ApplicationController
   load_and_authorize_resource :except => :show
 
   def index
+    @page_title = "Admin"
     @users = User.paginate :page => params[:page],
                             :per_page => 30,
                             :order => "created_at DESC"
@@ -13,6 +14,7 @@ class UsersController < ApplicationController
     @articles = @user.articles.paginate :page => params[:page],
                                        :per_page => 20,
                                        :order => "created_at DESC"
+    @page_title = "#{@user.name}'s articles"
   end
 
   def destroy
