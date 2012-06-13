@@ -3,17 +3,19 @@ Convenientarticles::Application.routes.draw do
   devise_for :users
   resources :users, :only => [:show, :index]
   resources :articles
+  resources :messages
 
   authenticated :user do
     root :to => 'pages#index'
   end
 
   match "/about", to: "pages#about"
-  match "/contact", to: "pages#contact"
   match "/admin", to: "users#index"
   match "/new", to: "articles#new"
   match "/guidelines", to: "pages#submission_guidelines"
 
+  match "/contact" => "messages#contact", :as => 'contact', :via => :get
+  match "/contact" => "messages#create", :as => 'contact', :via => :post
 
 
   # The priority is based upon order of creation:

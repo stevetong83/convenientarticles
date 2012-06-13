@@ -30,6 +30,13 @@ h1, h2 {
 .body {
     font-size: 80%;
     color: #787878;
+    width: 930px;
+}
+
+#article_header {
+    font-size: 80%;
+    color: #787878;
+    width: 930px;
 }
 
 #devise input, textarea {
@@ -83,8 +90,6 @@ h1, h2 {
     color: #ccc;
 }
 
-
-
 #nav_wrapper {
     margin-left: auto;
     margin-right: auto;
@@ -96,7 +101,6 @@ h1, h2 {
     color: #ccc;
     font-size: 150%;
     float: left;
-
 }
 
 #navbar {
@@ -111,19 +115,29 @@ h1, h2 {
 }
 
 #wrapper {
-
+    min-height: 900px;
+    height: auto;
+    background: url(notebook.gif) repeat-y;
     margin-top: 10px;
     margin-left: auto;
     margin-right: auto;
     width: 1000px;
     background-color: #fff;
-    min-height: 900px;
-    height: auto;
     border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
 }
 
+#article {
+    width: 600px;
+    float: left;
+}
+
+#content_footer {
+
+    height: 1px;
+    clear: both;
+}
 #adsense {
     width: 930px;
     height: 110px;
@@ -131,7 +145,6 @@ h1, h2 {
 }
 
 #content {
-    background: url(notebook.gif) repeat-y;
     width: 930px;
     padding: 20px 20px 20px 70px;
     margin-bottom: 25px;
@@ -139,6 +152,25 @@ h1, h2 {
 
 #article_content {
     padding-right: 30px;
+    width: 700px;
+    float: left;
+}
+
+#adsense_article {
+    padding-right: 30px;
+    float: right;
+}
+
+#article_form input, textarea {
+    width: 85%;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #bbb;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    padding: 10px;
+    margin-top: 5px;
+    margin-left: 0;
 }
 
 #footer {
@@ -171,8 +203,9 @@ h1, h2 {
     color: #D63301;
     background-color: #FFCCBA;
     border: 1px solid #D63301;
-    margin: 10px 20px;
+    margin: 0px 25px 10px 0px;
     border-radius: 5px;
+    padding: 10px;
 
 }
 
@@ -181,7 +214,7 @@ h1, h2 {
     background-color: #DFF2BF;
     border: 1px solid #4F8A10;
     padding: 10px;
-    margin: 10px 0;
+    margin: 0px 25px 10px 0px;
     border-radius: 5px;
 }
 
@@ -216,13 +249,6 @@ h1, h2 {
     letter-spacing: -1px;
 }
 
-
-
-#article {
-    width: 600px;
-    float: left;
-}
-
 #search {
     width: 300px;
     float: left;
@@ -233,7 +259,6 @@ h1, h2 {
     width: 175px;
     padding-left: 50px;
 }
-
 
 #search_text input, textarea {
     width: 175px;

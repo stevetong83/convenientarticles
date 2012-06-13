@@ -55,5 +55,20 @@ module Convenientarticles
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+
+  config.action_mailer.smtp_settings = {
+      :address              => "smtp.gmail.com",
+      :port                 => 587,
+      :domain               => "convenientarticles.com",
+      :user_name            => "convenientmailinfo@gmail.com",
+      :password             => "c0nvenient",
+      :authentication       => :plain,
+      :enable_starttls_auto => true
+  }
+
+  config.action_mailer.default_url_options = {
+      :host => "convenientarticles.com"
+  }
   end
 end

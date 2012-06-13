@@ -8,7 +8,7 @@
 <%	 @articles.each do |article| %>
     <p>
 <span class="title"><%=	 link_to article.title, article_path(article) %></span><br />
-      <span class="body"><%=	 article.body.slice(0,300) %>...</span><br />
+      <span class="body"><%=	 article.body.slice(0,300).gsub(%r{</?[^>]+?>}, '') %>...</span><br />
       <span class="time_published">By: <%=	 article.user.name %></span>
       <span class="time_published">Published: <%=	time_ago_in_words( article.created_at)  %> ago</span>
     </p>
@@ -23,3 +23,4 @@
       <div id="search_button"><%=	 image_submit_tag("search.png")%></div>
 <%	 end %>
 </div>
+<div id="content_footer"></div>
