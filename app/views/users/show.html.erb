@@ -6,8 +6,16 @@
     </ul>
 <%	 end %>
 
+<p>
+<%	 if @articles.empty? %>
+    You have not written any articles yet. <%=	 link_to "Go ahead and write one.", new_path %>
+      <%	 else %>
+      <span class="count">Total number of articles: <%=	 @articles.count %></span>
+    <%	 end %>
+</p>
+
   <%=	 will_paginate @articles %>
   <br />
 
-<span class="count">Total number of articles: <%=	 @articles.count %></span>
+
 
