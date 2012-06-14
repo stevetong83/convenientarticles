@@ -20,7 +20,7 @@ class Article < ActiveRecord::Base
   def self.search(search, page)
     paginate :page => page,
              :per_page => 10,
-             :conditions => ['title like ?', "%#{search}%"],
+             :conditions => ['title ILIKE ?', "%#{search}%"],
              :order => "created_at DESC"
   end
 
