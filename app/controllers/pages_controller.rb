@@ -1,10 +1,7 @@
 class PagesController < ApplicationController
   def index
     @page_title = "Article Submission Site"
-    @articles = Article.paginate :page => params[:page],
-                                :per_page => 10,
-                                :conditions => ['title like ?', "%#{params[:search]}%"],
-                                :order => "created_at DESC"
+    @articles = Article.search(params[:search], params[:page])
   end
 
   def about

@@ -16,4 +16,12 @@ class Article < ActiveRecord::Base
   def to_param
     "#{id}-#{title.gsub(/\W/, '-').downcase}"
   end
+
+  def self.search(search, page)
+    paginate :page => page,
+             :per_page => 10,
+             :conditions => ['title like ?', "%#{search}%"],
+             :order => "created_at DESC"
+  end
+
 end
